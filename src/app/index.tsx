@@ -1,11 +1,16 @@
-import { Text, View } from 'react-native'
-import { router } from 'expo-router'
+import { Redirect } from 'expo-router'
 
 export default function App() {
-  return (
-    <View>
-      <Text className="text-7xl text-red-500">App</Text>
-      <Text onPress={() => router.push('/login')}>Login</Text>
-    </View>
-  )
+  // const userData = {
+  //   token: 'asdpoj324nlkwsdf0',
+  //   name: 'Felipe',
+  // }
+
+  const userData = null
+
+  if (userData) {
+    return <Redirect href="(private)/home" />
+  }
+
+  return <Redirect href="/login" />
 }
