@@ -3,7 +3,7 @@ module.exports = {
   printWidth: 100,
   semi: false,
   singleQuote: true,
-  trailingComma: 'all',   // 'all' é mais consistente que 'es5' com TypeScript
+  trailingComma: 'all', // 'all' é mais consistente que 'es5' com TypeScript
   tabWidth: 2,
   useTabs: false,
   bracketSpacing: true,
@@ -11,4 +11,6 @@ module.exports = {
   jsxSingleQuote: false,
   proseWrap: 'preserve',
   endOfLine: 'auto',
+  plugins: ['prettier-plugin-tailwindcss'],
+  tailwindFunctions: ['tv'],
 }
