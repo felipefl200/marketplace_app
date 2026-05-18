@@ -4,6 +4,7 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import { router } from 'expo-router'
 
 import { AppInputController } from '@/components/AppInputController'
+import { AuthFormHeader } from '@/components/AuthFormHeader'
 
 import { useRegisterViewModel } from './useRegister.viewModel'
 
@@ -14,6 +15,10 @@ export const RegisterView: FC<ReturnType<typeof useRegisterViewModel>> = ({
 }) => {
   return (
     <View className="flex-1 items-center justify-center">
+      <AuthFormHeader
+        title="Crie sua conta"
+        subtitle="Informe os dados abaixo para criar sua conta"
+      />
       <AppInputController
         leftIcon="mail-outline"
         label="E-MAIL"
